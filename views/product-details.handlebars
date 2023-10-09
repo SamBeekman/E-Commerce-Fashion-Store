@@ -1,0 +1,63 @@
+{{!-- <header class="d-flex  align-content-center">
+    <div class="logo">Logo</div>
+    <img id="logo" class="logo" src="../../images/logo-1.jpg" alt="Logo">
+
+
+    <nav class="position-relative">
+        <ul class="d-flex justify-content-center align-content-center">
+            {{#each catData as | catItems|}}
+            <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </nav>
+    <div class="cart text-end "><button class="bg-primary px-4 text-white"><a href="/cart"
+                class="bg-primary px-4 text-white">{{cartTotal}} Cart</a></button></div>
+</header> --}}
+
+{{!-- body start here --}}
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div class="product-details-img">
+                    <img src={{productData.product_image_path}} alt="hhh" title="df" />
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="product-info">
+                    <h2>{{productData.product_name}}</h2>
+
+                    <h3>${{productData.price}}</h3>
+
+                    <div>
+                        {{#if productData.is_stock}}
+                        <p>
+                            # Items in Stock: {{productData.stock}}
+                        </p>
+                        {{else}}
+                        <p id="no-stock">Currently Out of Stock</p>
+                        {{/if}}
+                    </div>
+
+                    <div>
+                        <h4>Product Description</h4>
+                        <ul>
+                            <li>{{productData.product_desc}}</li>
+                        </ul>
+                    </div>
+                    <div class="btn-product">
+                        {{#if productData.is_stock}}
+                        <a href="/cart/add-to-cart/{{productData.id}}" class="btn btn-primary btn-lg btn-block">ADD TO
+                            CART • ${{productData.price}}</a>
+                        {{/if}}
+                    </div>
+                    <div class="mt-4 d-flex justify-content-center">
+                        <button type="button" class="btn-primary btn-outline-secondary btn-lg" id="goBackButton">GO
+                            BACK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

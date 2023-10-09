@@ -1,0 +1,83 @@
+{{!-- header --}}
+{{!-- {{> header catData=catData}} --}}
+
+<header class="d-flex  align-content-center justify-content-end container">
+    <div class="row">
+        {{!-- <img id="logo" class="logo col-lg-3" src="../../images/logo-1.jpg" alt="Logo"> --}}
+        <nav class="position-relative col-lg-6">
+            <ul class="d-flex justify-content-center align-content-center">
+                {{#each catData as | catItems|}}
+                <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </nav>
+
+        <div class="cart text-end serch-input col-lg-3"> <input type="search" placeholder="search here..."
+                id="searchProductCat" />
+            </i></div>
+    </div>
+</header>
+{{!-- Body --}}
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-3">
+            <div class="list-items">
+                <div class="list-itme-list">
+                    {{!-- <h3>Categories</h3> --}}
+                    <ul>
+                        <li>
+                            <a href="">{{cuatData.category_name}}</a>
+
+                            <div class="catlistitems">
+                                {{#each cuatData.subCategories as | subcat |}}
+                                <h3><a
+                                        href="/category/sub-category/{{../cuatData.slug}}/{{subcat.slug}}">{{subcat.sub_category_name}}</a>
+                                </h3>
+                                <ul>
+                                </ul>
+                                {{/each}}
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-itme-list">
+                    <h3>Filter By price</h3>
+                    <span id="fprice"></span>
+                    <input type="range" min="15" max="200" id="price-filter">
+                    {{!-- <p>Less than $50</p>
+                    <p>$50 - $75</p>
+                    <p>$75 - $100</p>
+                    <p>$100 or more</p> --}}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="row" id="productSearchItems">
+                {{#each finalProductLists as | proItems |}}
+
+                <div class="col-md-4">
+                    <div class="product-list-items">
+                        <div class="card">
+                              <div class="hover-img">
+                            <a href="/product/{{proItems.slug}}">
+                                <img class="card-img-top productImage" src="{{proItems.product_image_path}}"
+                                    alt="Product Image">
+                            </a>
+</div>
+                            <div class="card-body">
+                                <h5 class="card-title prodcut-title">{{proItems.product_name}}</h5>
+                                <p class="card-text product-price">Price:{{proItems.price}}</p>
+
+                            </div>
+                        </div>
+</div>
+                </div>
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="/js/product.js"></script>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+        	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Roboto&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500;8..60,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/jass.css">
+    <link rel="stylesheet" type="text/css" href="/css/media.css">
+</head>
+
+<body>
+    <div class="container-fluid primary-background " style="position: sticky;top:0;z-index:999;padding:10px 0px">
+        <div class="container">
+            <div class="row d-flex justify-content-between align-items-center">
+                {{!-- <div class="col-xl-3 col-3">
+                    <a href="/"><img id="logo" class="logo" src="/images/logo-white.png" alt="Logo" width="70px"
+                            height="auto"></a>
+                </div> --}}
+                {{!-- <div id="top-menu col-md-9 col-9">
+                    
+                    <nav>
+                        <ul class="nav ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#about" title="home">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/product" title="products">PRODUCTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/cart" title="cart">CART
+                                    {{#if cartTotal}}
+                                    <span class="badge rounded-pill bg-danger">
+                                        {{cartTotal}}
+                                    </span>
+                                    {{/if}}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                {{#if loggedIn}}
+                                <a id="logout" class="nav-link">&#9094; LOGOUT &#9094;</a>
+                                {{else}}
+                                <a class="nav-link" href="/login" title="Login"> &#9094; LOGIN &#9094;</a>
+                                {{/if}}
+                            </li>
+                        </ul>
+                      
+                    </nav> --}}
+            
+               <nav class="navbar navbar-expand-lg mobile">
+						<a href="" class="navbar-brand">
+							<img  id="logo" class="logo" src="/images/logo-white.png" alt="Logo" width="70px"
+                            height="auto"/>
+						</a>
+						<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" >
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse justify-content-end menu" id="navbarNav">
+							<ul class="navbar-nav align-items-lg-center nav">
+							
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#about" title="home">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/product" title="products">PRODUCTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/cart" title="cart">CART
+                                    {{#if cartTotal}}
+                                    <span class="badge rounded-pill bg-danger">
+                                        {{cartTotal}}
+                                    </span>
+                                    {{/if}}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                {{#if loggedIn}}
+                                <a id="logout" class="nav-link">&#9094; LOGOUT &#9094;</a>
+                                {{else}}
+                                <a class="nav-link" href="/login" title="Login"> &#9094; LOGIN &#9094;</a>
+                                {{/if}}
+                            </li>
+                    
+							</ul>
+						</div>
+					</nav>
+					<div class="offcanvas offcanvas-start offcanvas-size-sm"  id="offcanvasExample" >
+						<div class="offcanvas-header">
+	    					<h5 class="offcanvas-title" id="offcanvasExampleLabel">
+	    						<img  id="logo" class="logo" src="/images/logo-white.png" alt="Logo" width="70px"
+                            height="auto"/>
+	    					</h5>
+	    						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  						</div>
+  						<div class="offcanvas-body">
+  							<div class=" navbar-collapse justify-content-end menu" id="navbarNav">
+							<ul class="navbar-nav align-items-lg-center nav">
+							
+                            <li class="nav-item">
+                                <a class="nav-link" href="/#about" title="home">ABOUT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/product" title="products">PRODUCTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/cart" title="cart">CART
+                                    {{#if cartTotal}}
+                                    <span class="badge rounded-pill bg-danger">
+                                        {{cartTotal}}
+                                    </span>
+                                    {{/if}}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                {{#if loggedIn}}
+                                <a id="logout" class="nav-link">&#9094; LOGOUT &#9094;</a>
+                                {{else}}
+                                <a class="nav-link" href="/login" title="Login"> &#9094; LOGIN &#9094;</a>
+                                {{/if}}
+                            </li>
+                    
+							</ul>
+						</div>
+  						</div>
+					</div>
+            </div>
+        </div>
+    </div>
+
+   
+
+
+
+
+    <section>
+        <div class="container-fluid g-0">
+            {{{ body }}}
+        </div>
+    </section>
+
+    <footer class="footer bg-dark">
+        <div class="container g-0">
+            <div class="row py-4">
+                <div class="col-12 col-md-3">
+                    <ul>
+                        <li class="bold-list">COLLECTIONS:</li>
+                        <li><a class="text-white-50" href="/category/men">Men</a></li>
+                        <li><a class="text-white-50" href="/category/women">Women</a></li>
+                        <li><a class="text-white-50" href="/category/kids">Kids</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3">
+                    <ul>
+                        <li class="bold-list">CUSTOMER SERVICE:</li>
+                        <li><a class="text-white-50" href="#">Contact Us</a></li>
+                        <li><a class="text-white-50" href="#">Delivery</a></li>
+                        <li><a class="text-white-50" href="#">Returns</a></li>
+                        <li><a class="text-white-50" href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-3 m-auto">
+                    <img src="/images/icons/delivery.png" alt="Delivery" width="auto" height="70px">
+                    <p class="bold-list mt-2">FREE STANDARD DELIVERY >$100</p>
+                </div>
+                <div class="col-12 col-md-3 m-auto">
+                    <img src="/images/icons/returns.png" alt="Returns" width="auto" height="70px">
+                    <p class="bold-list mt-2">30-DAY FREE RETURNS</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+</body>
+
+<script src="/js/go-back.js"></script>
+<script src="/js/clear-cart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" ></script>
+{{!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script> --}}
+
+
+</html>

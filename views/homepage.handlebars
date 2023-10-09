@@ -1,0 +1,112 @@
+
+
+<header class="d-flex  align-content-center justify-content-end container">
+    <div class="row">
+        {{!-- <img id="logo" class="logo col-lg-3" src="../../images/logo-1.jpg" alt="Logo"> --}}
+        <nav class="position-relative col-md-6 col-12">
+            <ul class="d-flex justify-content-center align-content-center">
+                {{#each catData as | catItems|}}
+                <li><a href="/category/{{catItems.slug}}">{{catItems.category_name}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </nav>
+
+    </div>
+</header>
+{{!-- Body --}}
+<div class="container-fluid g-0" id="header-image">
+    <div class="row">
+        <div class="col d-none d-xl-block">
+            <img src="/assets/new-season-header2.jpg" width="100%" height="auto">
+        </div>
+        <div class="col d-xl-none d-block">
+            <img src="/assets/new-season-header-mobile.jpg" width="100%" height="auto">
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="container py-md-5" id="shop-now">
+        <div class="row border-bottom">
+            <h2>SHOP NOW</h2>
+        </div>
+        <div class="row" id="shop-cards">
+            {{!-- {{#each categoryProductImageData as | categories |}}
+            <div class="col-4">
+                <a href="/category/{{categories.slug}}">
+                    <div class="card">
+                        <img src="{{categories.pdata.subcat.product_image_path}}" class="card-img-top"
+                            alt="{{categories.category_name}}">
+                        <div class="card-body">
+                            <h4 class="card-title text-uppercase">{{categories.category_name}}</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {{/each}} --}}
+            <div class="col-lg-4 col-12 mesia">
+                <a href="/category/men">
+                    <div class="card">
+                        <img src="/images/jackets/jacket-2-1.jpg" class="card-img-top" alt="Men's">
+                        <div class="card-body">
+                            <h4 class="card-title text-uppercase">SHOP MEN'S</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-12 mesia">
+                <a href="/category/women">
+                    <div class="card">
+                        <img src="/images/dresses/dress-4-1.jpg" class="card-img-top" alt="Women's">
+                        <div class="card-body">
+                            <h4 class="card-title text-uppercase">SHOP WOMEN'S</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-12 mesia">
+                <a href="/category/accessories">
+                    <div class="card">
+                        <img src="/images/shoes/shoes-3.jpg" class="card-img-top" alt="accessories'">
+                        <div class="card-body">
+                            <h4 class="card-title text-uppercase">SHOP ACCESSORIES</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-body-tertiary">
+    <div class="container py-md-5" id="about">
+        <div class="row border-bottom">
+            <h2>ABOUT 404 FASHION</h2>
+        </div>
+        <div class="row d-flex justify-content-center" id="about-cards">
+            <div class="col-xl-3 col-md-5 col-12 mx-2 d-flex flex-column align-items-center">
+                <img src="/images/icons/ethical-business.png" class="icon" alt="Ethical" width="80px" height="auto">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Ethical Business</h4>
+                    <p class="card-text text-center">Behind the garments we produce are individuals. We've implemented
+                        thoughtfully designed work systems to guarantee their well-being and equitable remuneration.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-5 col-12 mx-2 d-flex flex-column align-items-center">
+                <img src="/images/icons/sustainable.png" class="icon" alt="Sustainable" width="80px" height="auto">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Sustainable Production</h4>
+                    <p class="card-text text-center">We strive to reduce our ecological footprint while maintaining the
+                        highest quality standards.</p>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-5 col-12 mx-2 d-flex flex-column align-items-center">
+                <img src="/images/icons/give-back.png" class="icon" alt="Sustainable" width="80px" height="auto">
+                <div class="card-body">
+                    <h4 class="card-title text-center">We Give Back</h4>
+                    <p class="card-text text-center">We give back to the community through support for charitable
+                        organizations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

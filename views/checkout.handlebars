@@ -1,0 +1,97 @@
+<div class="d-flex checkout-details">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-8 col-12">
+
+            
+        <h1>Shipping Details</h1><br>
+        <form class="row g-3" id="shipping-form">                          
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name">                
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name">                             
+            </div>
+            <div class="col-12 mb-3">
+                <input type="text" class="form-control" id="address1" name="address1" placeholder="Address 1">
+            </div>
+            <div class="col-12 mb-3">
+                <input type="text" class="form-control" id="address2" name="address2" placeholder="Address 2">
+            </div>
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" id="city" name="city" placeholder="City">
+            </div>
+            <div class="col-4 mb-3">
+                <input type="text" class="form-control" id="state" name="state" placeholder="State">
+            </div>
+            <div class="col-2 mb-3">
+                <input type="text" class="form-control" id="postcode" name="postcode" placeholder="Postcode">
+            </div>            
+        </form>
+      
+
+        <h1>Payment Details</h1><br>
+        <form class="row g-3" id="payment-form">
+            <div class="col-12 mb-3">
+                <input type="text" class="form-control" id="cardnumber" name="cardnumber" placeholder="Card number">
+            </div>
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" id="expiry" name="expiry" placeholder="Expiration Date (MM/YY)">
+            </div>
+            <div class="col-6 mb-3">
+                <input type="text" class="form-control" id="ccv" name="ccv" placeholder="CCV">
+            </div>
+            <div class="col-12 mb-3">
+                <input type="text" class="form-control" id="namecard" name="namecard" placeholder="Name on card">
+            </div>  
+        </form>
+        </div>
+       
+ 
+       <div class="col-md-4 col-12">
+    <div="bg-light p-4">
+        <table class="table table-sm table-borderless">
+            <thead class="font-weight-bold">
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                    <th scope="col" class="text-right"></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#if cart}}
+                {{#each cart.cart as | cartItems |}}
+                <tr>
+                    <td><img src='{{cartItems.productImage}}' width="40px"/>
+                    <td class="font-weight-bold">{{cartItems.productNamme}} x{{cartItems.qty}}</td>
+                    <td class="text-right text-nowrap">$<span class="qtyPriceMult">
+                        {{qtyMultiply cartItems.qty cartItems.price}}</span>.00</td>
+                </tr>
+                {{/each}}
+                {{else}}
+                <tr>
+                    <td class="text-center" colspan="6">NO ITEMS IN CART</td>
+                </tr>
+                {{/if}}
+            </tbody>
+        </table>
+  
+        <div class="d-flex align-items-end flex-column">
+            <h3>SUBTOTAL: <span id="subTot" class="font-weight-bold"></span></h3>
+            <h4>Shipping: <span id="shipping" class="font-weight-bold"></span></h4>
+            <h2>TOTAL: <span id="total" class="font-weight-bold"></span></h2>                      
+        </div>
+        <div class="success">
+            <a href="/success" title="checkoutTrue" class="btn btn-primary btn-lg btn-block"> CONFIRM PAYMENT</a>
+        </div>
+        <div class="mt-4 justify-content-center">
+            <button type="button" class="btn-primary btn-outline-secondary btn-lg" id="goBackButton">GO BACK</button>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<script src="./js/subtotal.js"></script>
+<script src="./js/shipping-total.js"></script>

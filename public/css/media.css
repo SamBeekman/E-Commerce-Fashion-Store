@@ -1,0 +1,114 @@
+@media only screen and (min-width:200px) and (max-width:567px){
+#shop-cards .card {
+    margin-bottom: 20px;
+}
+#shop-cards .card img{
+    height: 400px;
+}
+.logo{
+    width: 40px;
+}
+#top-menu nav ul li a{
+font-size: 12px;
+}
+#shop-cards .card-body{
+    padding-top: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+#shop-cards .card-body h4{
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.border-bottom h2{
+    font-size: 26px;
+    margin-top: 20px;
+}
+#about-cards>div{
+    margin-bottom: 20px;
+}
+.nav-item a {
+   font-size: 12px;
+}
+#offcanvasExample{
+    display: block;
+}
+.offcanvas-body{
+    background-color: var(--primary-color);
+}
+.mobile{
+    padding: 0px 10px;
+}
+.footer img{
+    padding-left: 15px;
+}
+.footer p{
+    padding-left: 15px;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-size: 11px;
+}
+.serch-input{
+   display: table;
+   margin: auto;
+}
+}
+
+@media only screen and (min-width:568px) and (max-width:767px){
+    #shop-cards .card {
+        margin-bottom: 20px;
+    }
+    .logo{
+        width: 40px;
+    }
+    #shop-cards .card img{
+        height: 400px;
+    }
+    #top-menu nav ul li a{
+    font-size: 12px;
+    }
+    #shop-cards .card-body{
+        padding-top: 15px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    #shop-cards .card-body h4{
+        margin-bottom: 0px;
+        font-size: 14px;
+    }
+    .border-bottom h2{
+        font-size: 26px;
+        margin-top: 20px;
+    }
+    #about-cards>div{
+        margin-bottom: 20px;
+    }
+    .nav-item a {
+       font-size: 12px;
+    }
+    #offcanvasExample{
+        display: block;
+    }
+    .offcanvas-body{
+        background-color: var(--primary-color);
+    }
+    .mobile{
+        padding: 0px 10px;
+    }
+    .footer img{
+        padding-left: 15px;
+    }
+    .footer p{
+        padding-left: 15px;
+    }
+    header nav ul li a {
+        text-decoration: none;
+        font-size: 11px;
+    }
+    .serch-input{
+       display: table;
+       margin: auto;
+    }
+
+    }
